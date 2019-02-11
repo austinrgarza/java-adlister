@@ -1,10 +1,11 @@
-public class DaoFactory {
-    private static Ads adsDao;
+import java.sql.SQLException;
+import java.util.List;
 
-    public static Ads getAdsDao() {
-        if (adsDao == null) {
-            adsDao = new ListAdsDao();
-        }
-        return adsDao;
-    }
+
+public class DaoFactory {
+
+    // instantiate a new configuration object.
+    private static Config config = new Config();
+
+    private static Ads adsDao;
 }
